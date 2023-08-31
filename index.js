@@ -5,11 +5,11 @@ const client = new Client({
 
 module.exports = (client)
 
-let { readdirSync } = require('fs');
 const yaml = require('js-yaml');
 const fs = require('fs');
 const config = yaml.load(fs.readFileSync('settings/config.yml', 'utf8', 2));
 
+client.commands = new Collection();
 client.slashCommands = new Collection();
 client.config = yaml.load(fs.readFileSync('settings/config.yml', 'utf8', 2));
 

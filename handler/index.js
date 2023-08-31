@@ -1,7 +1,6 @@
 const { glob } = require("glob");
 const { promisify } = require("util");
 const { Client } = require("discord.js");
-const mongoose = require("mongoose");
 const yaml = require('js-yaml');
 const fs = require('fs');
 const config = yaml.load(fs.readFileSync('settings/config.yml', 'utf8', 2))
@@ -14,13 +13,14 @@ module.exports = async (client) => {
 
     client.on("ready", () => {
     
-        console.log(chalk.green.bold(' The bot is running'));
+        console.log(chalk.magenta.bold(' ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗'));
+        console.log(chalk.magenta.bold(` ┃    Suggestion Bot by github.com/sdeyy    ┃`))
+        console.log(chalk.magenta.bold(` ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝`))
     })
 
     // Events
     const eventFiles = await globPromise(`${process.cwd()}/events/*/*.js`);
     eventFiles.map((value) => require(value));
-
     // Slash Commands
     const slashCommands = await globPromise(
         `${process.cwd()}/commands/*/*.js`
@@ -34,13 +34,11 @@ module.exports = async (client) => {
         if (["MESSAGE", "USER"].includes(file.type)) delete file.description;
         arrayOfSlashCommands.push(file);
     });
-
     client.on("ready", async () => {
         try { 
-        await client.guilds.cache
-            .get(`${config.GUILDID}`).commands.set(arrayOfSlashCommands);
+        await client.guilds.cache.get(`${config.GUILDID}`).commands.set(arrayOfSlashCommands);
         } catch (error) {
-            console.log(`[ERROR] Incorrect GuildID, check that it has been correctly placed in the configuration file.`)
+            console.log(`[ERROR] Incorrect GuildID, check that it has been correctly placed in the configuration file or contact with Raven Solutions.`)
         }
     });
 };

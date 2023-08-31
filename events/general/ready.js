@@ -1,6 +1,11 @@
 const client = require('../../index.js')
+const chalk = require("chalk")
 
 client.on("ready", () => {
+
+    console.log(chalk.green.bold(` ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
+ ┃    Bot conectado correctamente!    ┃
+ ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝`));
  
     const A= [
     {name: "github.com/sdeyy", type: "WATCHING"},
@@ -16,7 +21,7 @@ client.on("ready", () => {
     function presence(){
     client.user.setPresence( {
     activities:[activ],
-    status: "online"
+    status: "DND"
     })}
     
     presence()
