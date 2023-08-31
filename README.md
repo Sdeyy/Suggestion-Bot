@@ -21,5 +21,5 @@ Si encontraste un error o necesitas soporte entra a mi discord [Saturn Studios](
 * Paso 5: Baja un poco y copia la URL que te aparecera, como en la siguiente imagen
 <img src="https://i.imgur.com/FmZ6Zyi.png">
 
-* Paso 6: Selecciona el servidor al que lo quieres invitar y luego de seleccionarlo dale al boton de <span style="color:blue">Continuar</span>
+* Paso 6: Selecciona el servidor al que lo quieres invitar y luego de seleccionarlo dale al boton de <b>Continuar</b>
 <img src="https://i.imgur.com/QWS0zdu.png">
