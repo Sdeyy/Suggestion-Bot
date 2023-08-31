@@ -1,0 +1,27 @@
+# Bot hecho por sdeyy.lsd
+
+# La id de tu servidor, si no sabes como obtenerla tienes problemas
+GUILDID: "YOUR-GUILD-ID-HERE"
+
+# Nombre del bot
+BOTNAME: "Suggestion Bot"
+
+# conexion a mongodb
+mongodb: 'YOUR-MONGODB-URL-HERE'
+
+# El color que tendran los embeds
+EMBEDCOLOR: "PURPLE" # Tambien puede ser un HEX Color
+
+# Token de tu bot, si no sabes como obtener en serio tienes problemas
+TOKEN: "BOT-TOKEN-HERE"
+
+# Configuracion de las sugerencias
+SUGERENCIAS:
+  CHANNEL_ID: "CHANNEL-ID-HERE"
+  EMOJIS: 
+    UPVOTE: "✅"
+    DOWNVOTE: "❌"
+    VOTES: "❓"
+
+# Doy soporte por discord si estoy de buenas: sdeyy.lsd
+# Servidor de discord: https://discord.gg/BWk7JxxcBg
