@@ -1,2 +1,2 @@
 # Suggestion-Bot
-Basic suggestions bot
+Bot de sugerencia con botones
